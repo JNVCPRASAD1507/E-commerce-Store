@@ -1,9 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "rootDirectory": "KKG",
   "rewrites": [
     { "source": "/assets/:match*", "destination": "/assets/:match*" },
     { "source": "/favicon.ico", "destination": "/favicon.ico" },
