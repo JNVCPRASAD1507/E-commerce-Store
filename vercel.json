@@ -2,13 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "name": "kkg",
   "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
-  ],
-  "routes": [
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/jnvLogo.png", "dest": "/jnvLogo.png" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/assets/:match*", "destination": "/assets/:match*" },
+    { "source": "/favicon.ico", "destination": "/favicon.ico" },
+    { "source": "/jnvLogo.png", "destination": "/jnvLogo.png" },
+    { "source": "/:match*", "destination": "/index.html" }
   ]
 }
